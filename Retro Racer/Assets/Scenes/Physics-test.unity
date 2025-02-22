@@ -641,6 +641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sas_Glauke-288
       objectReference: {fileID: 0}
+    - target: {fileID: 5880506588707843529, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: useMobileInput
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1179.16
