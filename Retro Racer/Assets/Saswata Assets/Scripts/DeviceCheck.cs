@@ -4,25 +4,26 @@ using System.Runtime.InteropServices; // Required for JavaScript calls
 public class DeviceCheck : MonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern int IsMobile(); // Import JavaScript function
+    private static extern int IsMobile(); // Import JavaScript function for WebGL detection
 
-    public GameObject mobileCanvas;
-    public GameObject inputManagerObject; // Drag & Drop the GameObject with InputManager_SVP in Inspector
+    public GameObject mobileCanvas; // Drag & Drop Mobile UI Canvas in Inspector
+    public GameObject inputManagerObject; // Drag & Drop GameObject containing InputManager_SVP
 
     void Start()
     {
-        bool isMobile;
+        bool isMobile = false;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
-        isMobile = IsMobile() == 1; // Call JavaScript function for WebGL
+        // WebGL - Use JavaScript function
+        isMobile = IsMobile() == 1;
+        Debug.Log("Detected via JS (WebGL): " + (isMobile ? "Mobile" : "PC"));
 #else
-        isMobile = SystemInfo.deviceType == DeviceType.Handheld; // Fallback for non-WebGL
+        // Normal Unity detection (Editor, Windows, Android, iOS)
+        isMobile = SystemInfo.deviceType == DeviceType.Handheld;
+        Debug.Log("Detected via Unity: " + (isMobile ? "Mobile" : "PC"));
 #endif
 
-        // Log detected platform
-        Debug.Log("Detected Platform: " + (isMobile ? "Mobile" : "PC"));
-
-        // Enable or disable mobile input canvas
+        // Enable or disable the mobile UI
         if (mobileCanvas != null)
         {
             mobileCanvas.SetActive(isMobile);
@@ -33,7 +34,7 @@ public class DeviceCheck : MonoBehaviour
             Debug.LogWarning("Mobile canvas GameObject not assigned!");
         }
 
-        // Check if InputManager_SVP is assigned and found
+        // Ensure InputManager_SVP is manually assigned
         if (inputManagerObject != null)
         {
             var inputManager = inputManagerObject.GetComponent("InputManager_SVP");
