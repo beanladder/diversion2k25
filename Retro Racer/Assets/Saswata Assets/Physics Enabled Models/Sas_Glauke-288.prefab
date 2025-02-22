@@ -665,6 +665,7 @@ MonoBehaviour:
   - {fileID: 5880506588707843529}
   - {fileID: 2522946637965591088}
   - {fileID: 3894056131809669679}
+  - {fileID: 4190145460983988538}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &2522946637965591088
 MonoBehaviour:
@@ -892,6 +893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobileCanvas: {fileID: 1895025339259185235}
   inputManagerObject: {fileID: 575664627383769676}
+  _useMobileInput: 0
 --- !u!1 &1286072286885300642
 GameObject:
   m_ObjectHideFlags: 0
