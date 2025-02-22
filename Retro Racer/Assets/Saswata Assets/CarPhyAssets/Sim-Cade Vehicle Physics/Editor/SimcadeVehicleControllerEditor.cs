@@ -3,11 +3,10 @@ using Ashsvp;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(SimcadeVehicleController))]
+
 public class SimcadeVehicleControllerEditor : Editor
 {
-    
-    private void OnEnable()
+    public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
     }
