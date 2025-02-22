@@ -715,6 +715,33 @@ MonoBehaviour:
   VehicleSpeed: 0
   currentGear: 0
   gearSpeeds: 280000005000000078000000a0000000dc000000
+  virtualCamera: {fileID: 8510764565917309834}
+  fovCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 60
+      inSlope: 0
+      outSlope: 15
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 75
+      inSlope: 15
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minFOV: 60
+  maxFOV: 75
   AudioSystem: {fileID: 769445848274948112}
 --- !u!114 &4738154782597891539
 MonoBehaviour:
@@ -1606,7 +1633,7 @@ Transform:
   m_GameObject: {fileID: 8081401729106828683}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07684534, y: 0.00005201663, z: -0.000004009091, w: 0.997043}
-  m_LocalPosition: {x: -0.0010986328, y: 3.0836973, z: -6.8884277}
+  m_LocalPosition: {x: -0.0010590553, y: 3.083737, z: -6.888707}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
