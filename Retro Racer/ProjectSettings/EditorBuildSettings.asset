@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer.unity
+    guid: e4bb9e17a110b4795925a1da5433e6ca
   - enabled: 0
     path: Assets/Scenes/TestAngshu.unity
     guid: 9e5195fbda6e0eb44a075fa6f2ad71bc

@@ -51,6 +51,8 @@ GameObject:
   - component: {fileID: 5880506588707843529}
   - component: {fileID: 223460998607232189}
   - component: {fileID: 3223379132090922565}
+  - component: {fileID: 6719399398100129414}
+  - component: {fileID: 2522946637965591088}
   m_Layer: 0
   m_Name: Sas_Glauke-288
   m_TagString: Untagged
@@ -602,13 +604,16 @@ MonoBehaviour:
     accelerate: 119
     decelerate: 115
     handBrake: 32
-  useMobileInput: 0
+  useMobileInput: 1
   mobileInput:
     steerLeft: {fileID: 1922066285868457009}
     steerRight: {fileID: 499484630197554567}
     accelerate: {fileID: 5640167761593216386}
     decelerate: {fileID: 880773465746099556}
     handBrake: {fileID: 5854109728395836173}
+  _NetworkSteerInput: 0
+  _NetworkAccelerationInput: 0
+  _NetworkHandbrakeInput: 0
 --- !u!114 &223460998607232189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +645,49 @@ MonoBehaviour:
   bodyCollider: {fileID: 5796888079463322154}
   LowerBodyFriction: 0
   UpperBodyFriction: 0.5
+--- !u!114 &6719399398100129414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575664627383769676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 1852784104
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 5880506588707843529}
+  - {fileID: 2522946637965591088}
+  ForceRemoteRenderTimeframe: 0
+--- !u!114 &2522946637965591088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575664627383769676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a591d221a634417e9827eb58e17de84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stateAuthorityChangeErrorCorrectionDelta: 0.5
+  SyncScale: 0
+  SyncParent: 1
+  _interpolationTarget: {fileID: 1677837727068174980}
+  UsePreciseRotation: 1
+  UseRenderSleepThresholds: 1
+  RenderThresholds:
+    UseEnergy: 1
+    Position: 0.01
+    Rotation: 0.01
+    Scale: 0.01
 --- !u!1 &680925351833296291
 GameObject:
   m_ObjectHideFlags: 0
