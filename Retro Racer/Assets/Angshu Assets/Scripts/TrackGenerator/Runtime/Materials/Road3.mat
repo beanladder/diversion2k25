@@ -109,7 +109,7 @@ Material:
     - _RampSmoothing: 0
     - _RampThreshold: 0
     - _ReceiveShadows: 1
-    - _ShadowIntensity: 0.5
+    - _ShadowIntensity: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
