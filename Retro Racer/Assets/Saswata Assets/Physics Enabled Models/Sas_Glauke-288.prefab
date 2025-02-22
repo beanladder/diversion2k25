@@ -599,21 +599,6 @@ MonoBehaviour:
     accelerate: {fileID: 5640167761593216386}
     decelerate: {fileID: 880773465746099556}
     handBrake: {fileID: 5854109728395836173}
-  _NetworkSteerInput: 0
-  _NetworkAccelerationInput: 0
-  _NetworkHandbrakeInput: 0
---- !u!114 &5334737381663539940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575664627383769676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e63e9b5fd272649499f3444be7c348de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &223460998607232189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +772,7 @@ GameObject:
   - component: {fileID: 7550283909257030663}
   - component: {fileID: 8437642622887781308}
   - component: {fileID: 1802155738819567851}
-  - component: {fileID: 1914633837436474132}
+  - component: {fileID: 4190145460983988538}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -878,7 +863,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1914633837436474132
+--- !u!114 &4190145460983988538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -887,7 +872,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 807490353398653384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0358857a7dc90f499a243bd28c8081f, type: 3}
+  m_Script: {fileID: 11500000, guid: bee675c5dba314e488e0e2b0a0d4cd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mobileCanvas: {fileID: 1895025339259185235}
