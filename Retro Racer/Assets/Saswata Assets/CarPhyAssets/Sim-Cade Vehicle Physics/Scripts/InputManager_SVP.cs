@@ -3,6 +3,7 @@ using Fusion;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static Ashsvp.InputManager_SVP;
 
 namespace Ashsvp
 {
@@ -23,8 +24,7 @@ namespace Ashsvp
         [Serializable]
         public class MobileInput
         {
-            public UiButton_SVP steerLeft;
-            public UiButton_SVP steerRight;
+            // Steering buttons (Removed because we use a steering wheel now)
             public UiButton_SVP accelerate;
             public UiButton_SVP decelerate;
             public UiButton_SVP handBrake;
@@ -66,6 +66,7 @@ namespace Ashsvp
             NetworkHandbrakeInput = targetHandbrakeInput;
         }
 
+        // **Keyboard Input Methods**
         private float GetKeyboardSteerInput()
         {
             float steerInput = 0f;
@@ -87,12 +88,10 @@ namespace Ashsvp
             return Input.GetKey(keyboardInput.handBrake) ? 1f : 0f;
         }
 
+        // **Mobile Input Methods (Using Steering Wheel Instead of Buttons)**
         private float GetMobileSteerInput()
         {
-            float steerInput = 0f;
-            if (mobileInput.steerLeft.isPressed) steerInput -= 1f;
-            if (mobileInput.steerRight.isPressed) steerInput += 1f;
-            return steerInput;
+            return steeringWheel != null ? steeringWheel.SteeringInput : 0f;
         }
 
         private float GetMobileAccelerationInput()
