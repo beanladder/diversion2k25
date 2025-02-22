@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CarSelection.unity
+    guid: 0881fdf2e737afc4cba981fdd44a7459
+  - enabled: 1
     path: Assets/Scenes/Multiplayer.unity
     guid: e4bb9e17a110b4795925a1da5433e6ca
   - enabled: 0
     path: Assets/Scenes/TestAngshu.unity
     guid: 9e5195fbda6e0eb44a075fa6f2ad71bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Physics-test.unity
     guid: 5903b11552d847947b94a9deaa1ef319
   m_configObjects:

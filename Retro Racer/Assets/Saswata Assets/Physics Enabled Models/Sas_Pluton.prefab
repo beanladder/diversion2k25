@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 2344903833132667530}
   - component: {fileID: 4440858511440520971}
   - component: {fileID: 7997891250334707616}
+  - component: {fileID: 8215944132863297632}
   m_Layer: 0
   m_Name: CinemachineCamera (3)
   m_TagString: Untagged
@@ -651,6 +652,19 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &8215944132863297632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167280610345006315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebad8ed6024a21f4f986364b190653c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraObject: {fileID: 3167280610345006315}
 --- !u!1 &3351574965889460752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1715,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 147755885955480106}
   - {fileID: 5513323074837731976}
+  - {fileID: 8215944132863297632}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &5513323074837731976
 MonoBehaviour:
