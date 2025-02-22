@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static Ashsvp.InputManager_SVP;
 
 namespace Ashsvp
@@ -21,7 +23,8 @@ namespace Ashsvp
         [Serializable]
         public class MobileInput
         {
-            // Steering buttons (Removed because we use a steering wheel now)
+            public UiButton_SVP steerLeft;
+            public UiButton_SVP steerRight;
             public UiButton_SVP accelerate;
             public UiButton_SVP decelerate;
             public UiButton_SVP handBrake;
@@ -30,11 +33,10 @@ namespace Ashsvp
         public bool useMobileInput = false;
         public MobileInput mobileInput = new MobileInput();
 
-        public SteeringWheel steeringWheel; // Steering wheel reference
-
         public float SteerInput { get; private set; }
         public float AccelerationInput { get; private set; }
         public float HandbrakeInput { get; private set; }
+
 
         private void Update()
         {
@@ -49,14 +51,14 @@ namespace Ashsvp
                 tempHandbrakeInput = GetMobileHandbrakeInput();
             }
 
-            // Smooth input values for a better feel
+
+
             AccelerationInput = Mathf.Abs(tempAccelerationInput) > 0 ? Mathf.Lerp(AccelerationInput, tempAccelerationInput, 15 * Time.deltaTime) : 0;
             SteerInput = Mathf.Abs(tempSteerInput) > 0 ? Mathf.Lerp(SteerInput, tempSteerInput, 15 * Time.deltaTime)
                 : Mathf.Lerp(SteerInput, tempSteerInput, 25 * Time.deltaTime);
             HandbrakeInput = tempHandbrakeInput;
         }
 
-        // **Keyboard Input Methods**
         private float GetKeyboardSteerInput()
         {
             float steerInput = 0f;
@@ -82,10 +84,15 @@ namespace Ashsvp
             return Input.GetKey(keyboardInput.handBrake) ? 1f : 0f;
         }
 
-        // **Mobile Input Methods (Using Steering Wheel Instead of Buttons)**
+
         private float GetMobileSteerInput()
         {
-            return steeringWheel != null ? steeringWheel.SteeringInput : 0f;
+            float steerInput = 0f;
+            if (mobileInput.steerLeft.isPressed)
+                steerInput -= 1f;
+            if (mobileInput.steerRight.isPressed)
+                steerInput += 1f;
+            return steerInput;
         }
 
         private float GetMobileAccelerationInput()
@@ -102,5 +109,6 @@ namespace Ashsvp
         {
             return mobileInput.handBrake.isPressed ? 1f : 0f;
         }
+
     }
 }
