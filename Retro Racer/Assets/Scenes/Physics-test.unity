@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5e88a93148f69984e968ecc92408960f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,20 +222,20 @@ Transform:
   m_GameObject: {fileID: 355466178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<<< HEAD:Retro Racer/Assets/Scenes/Physics-test.unity
+
   m_LocalPosition: {x: 8.889812, y: 0.67319924, z: -0.04444754}
   m_LocalScale: {x: 1000, y: 1, z: 1000}
-========
+
   m_LocalPosition: {x: 0, y: 1, z: -23.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>>> angshu-debris-shader:Retro Racer/Assets/Scenes/TestAngshu.unity
+
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<<< HEAD:Retro Racer/Assets/Scenes/Physics-test.unity
+
 --- !u!1 &708660168
-========
+
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
 --- !u!1 &410087039
->>>>>>>> angshu-debris-shader:Retro Racer/Assets/Scenes/TestAngshu.unity
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -364,11 +364,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
-<<<<<<<< HEAD:Retro Racer/Assets/Scenes/Physics-test.unity
+
 --- !u!4 &708660170
-========
+
 --- !u!4 &410087041
->>>>>>>> angshu-debris-shader:Retro Racer/Assets/Scenes/TestAngshu.unity
+
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,10 +405,10 @@ MonoBehaviour:
   m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
-<<<<<<<< HEAD:Retro Racer/Assets/Scenes/Physics-test.unity
+
   m_SoftShadowQuality: 0
 --- !u!1 &718497879
-========
+
   m_SoftShadowQuality: 1
 --- !u!1 &747965829
 GameObject:
@@ -458,7 +458,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
->>>>>>>> angshu-debris-shader:Retro Racer/Assets/Scenes/TestAngshu.unity
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,9 +522,10 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
 
-  field of view: 60
 
-  field of view: 80
+
+
+  field of view: 70
 
   orthographic: 0
   orthographic size: 5
@@ -552,11 +553,16 @@ Transform:
   m_GameObject: {fileID: 718497879}
   serializedVersion: 2
 
+
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
 
   m_LocalRotation: {x: 0, y: 0.9434107, z: 0, w: -0.33162665}
   m_LocalPosition: {x: 11.138532, y: 2.5673006, z: 9.981874}
+
+
+  m_LocalRotation: {x: 0.07669688, y: -1.8922515e-22, z: 1.4555853e-23, w: 0.99705446}
+  m_LocalPosition: {x: 1178.1826, y: 7.9807267, z: -2607.4912}
 
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -641,17 +647,190 @@ MonoBehaviour:
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
 
+
+
+--- !u!1001 &1486112117
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 575664627383769676, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_Name
+      value: Sas_Glauke-288
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314013571121902711, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611751669942942768, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: CameraDistance
+      value: 10.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611751669942942768, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: TargetOffset.y
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611751669942942768, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: TargetOffset.z
+      value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455287180601007205, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: TargetOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455287180601007205, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: TargetOffset.z
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1178.1826
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2600.602
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978271718998723057, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455896492168954870, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0807266
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455896492168954870, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.88916
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455896492168954870, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99705446
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455896492168954870, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.07669688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455896492168954870, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1.8919134e-22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455896492168954870, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.4116281e-23
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d94778b5551bed42be2103ab5c7cd95, type: 3}
+--- !u!1001 &1888136446
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2186517721949278161, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_Name
+      value: Sas_Moros
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186517721949278161, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1184.6477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7749677
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2602.0146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843351923836941684, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5dc68322fe6ffc74ca50a6559e51e9f9, type: 3}
+
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-<<<<<<<< HEAD:Retro Racer/Assets/Scenes/Physics-test.unity
+
   - {fileID: 718497882}
   - {fileID: 708660170}
   - {fileID: 355466182}
-========
+
+
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 747965831}
->>>>>>>> angshu-debris-shader:Retro Racer/Assets/Scenes/TestAngshu.unity
+
+  - {fileID: 1888136446}
+  - {fileID: 1486112117}
+
