@@ -8,7 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Physics-test.unity
     guid: 5903b11552d847947b94a9deaa1ef319
-
+  - enabled: 1
+    path: Assets/Scenes/CarSelection.unity
+    guid: 0881fdf2e737afc4cba981fdd44a7459
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer.unity
+    guid: 343c80d89a2605146bb546467b2b371f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

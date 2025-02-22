@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Fusion;
+
 public class CarSelectionUI : MonoBehaviour
 {
     public GameObject[] carPrefabs; // Array of car prefabs
@@ -10,41 +10,40 @@ public class CarSelectionUI : MonoBehaviour
 
     private void Start()
     {
-        // Load previously selected car index
-        currentIndex = PlayerPrefs.GetInt("SelectedCarIndex", 0);
-
-        if (carPrefabs.Length > 0)
-        {
-            ShowCar(currentIndex);
-        }
+        // Load previously selected car index or default to 0
+        //currentIndex = PlayerPrefs.GetInt("SelectedCarIndex", 0);
+        ShowCar(currentIndex); // ✅ Show the first car on start
     }
 
     public void NextCar()
     {
-        if(currentIndex>=carPrefabs.Length-1){
+        if(currentIndex >= carPrefabs.Length-1){
             currentIndex = 0;
         }
         else{
             currentIndex++;
-            ShowCar(currentIndex);
         }
+        ShowCar(currentIndex);
     }
 
     public void PrevCar()
     {
-        if(currentIndex==0){
+        if( currentIndex == 0){
             currentIndex = carPrefabs.Length-1;
         }
         else{
             currentIndex--;
-            ShowCar(currentIndex);
         }
+        ShowCar(currentIndex);
     }
-    public void SelectCar(){
+
+    public void SelectCar()
+    {
         PlayerPrefs.SetInt("SelectedCarIndex", currentIndex);
         PlayerPrefs.Save();
         SceneManager.LoadScene("Multiplayer");
     }
+
     private void ShowCar(int index)
     {
         if (displayCar != null)
