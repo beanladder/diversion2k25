@@ -35,10 +35,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cull: 2
-    - _DissolveSharpness: 2.4
+    - _DissolveSharpness: 8.3
     - _DissolveValue: 0
     - _DstBlend: 0
-    - _EdgeWidth: 0.038
+    - _EdgeWidth: 0.194
     - _SrcBlend: 1
     - _ZWrite: 1
     m_Colors:
