@@ -33,6 +33,11 @@ namespace Track
         private CircularBuffer _frameTimeSamples;
         private List<GameObject> _currentVertices = new List<GameObject>();
 
+        void Awake()
+        {
+            _generationCycles = Random.Range(200, 400);
+        }
+
         private class CircularBuffer
         {
             private float[] _buffer;
