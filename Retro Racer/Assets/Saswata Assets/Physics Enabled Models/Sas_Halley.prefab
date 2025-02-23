@@ -742,6 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184401497027363614}
   - component: {fileID: 4422913766167753486}
+  - component: {fileID: 4967242281697363333}
   m_Layer: 0
   m_Name: Body Collider
   m_TagString: Untagged
@@ -785,6 +786,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9535666, y: 1.1487403, z: 3.7469723}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4967242281697363333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451317890859982140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7b22f4f2c12bb43afec1844fe348a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastCheckpoint: {fileID: 0}
 --- !u!1 &3658044634982531611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7b22f4f2c12bb43afec1844fe348a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastCheckpoint: {fileID: 0}
 --- !u!1 &5295599952849144272
 GameObject:
   m_ObjectHideFlags: 0
