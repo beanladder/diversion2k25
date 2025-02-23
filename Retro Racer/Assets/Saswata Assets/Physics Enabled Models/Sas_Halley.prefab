@@ -561,7 +561,6 @@ GameObject:
   - component: {fileID: 7112834035418111380}
   - component: {fileID: 3819399300746780850}
   - component: {fileID: 6664286538678984810}
-  - component: {fileID: 2436970831316364743}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -651,21 +650,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2436970831316364743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092652559944193754}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bee675c5dba314e488e0e2b0a0d4cd04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mobileCanvas: {fileID: 0}
-  inputManagerObject: {fileID: 5270418938581055347}
-  _useMobileInput: 0
 --- !u!1 &3131433856120562036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,7 +1543,6 @@ MonoBehaviour:
   - {fileID: 7934132526721804826}
   - {fileID: 7342263103023214863}
   - {fileID: 3939065053769124493}
-  - {fileID: 2436970831316364743}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &7342263103023214863
 MonoBehaviour:
