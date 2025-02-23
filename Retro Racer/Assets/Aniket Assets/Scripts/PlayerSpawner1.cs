@@ -11,8 +11,30 @@ public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
         if (player == Runner.LocalPlayer)
         {
             int SelectedCarIndex = PlayerPrefs.GetInt("SelectedCarIndex",0);
-            GameObject selectedCarPrefab = carPrefabs[SelectedCarIndex];
-            Transform spawnPoint = spawnPoints[0]; // You can adjust this logic to select a spawn point
+            GameObject selectedCarPrefab;
+            Transform spawnPoint;
+            switch (SelectedCarIndex){
+                case 0:
+                    selectedCarPrefab = carPrefabs[0];
+                    spawnPoint = spawnPoints[0];
+                    break;
+                case 1:
+                    selectedCarPrefab = carPrefabs[1];
+                    spawnPoint = spawnPoints[1];
+                    break;
+                case 2:
+                    selectedCarPrefab = carPrefabs[2];
+                    spawnPoint = spawnPoints[2];
+                    break;
+                case 3:
+                    selectedCarPrefab = carPrefabs[3];
+                    spawnPoint = spawnPoints[3];
+                    break;
+                default:
+                    selectedCarPrefab = carPrefabs[0];
+                    spawnPoint = spawnPoints[0];
+                    break;
+            }
             NetworkObject playerCar = Runner.Spawn(selectedCarPrefab, spawnPoint.position, spawnPoint.rotation);
         }
     }
