@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 3223379132090922565}
   - component: {fileID: 6719399398100129414}
   - component: {fileID: 2522946637965591088}
+  - component: {fileID: -2834084565393230237}
   m_Layer: 0
   m_Name: Sas_Glauke-288
   m_TagString: Untagged
@@ -690,6 +691,19 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &-2834084565393230237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575664627383769676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7b22f4f2c12bb43afec1844fe348a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastCheckpoint: {fileID: 0}
 --- !u!1 &680925351833296291
 GameObject:
   m_ObjectHideFlags: 0
