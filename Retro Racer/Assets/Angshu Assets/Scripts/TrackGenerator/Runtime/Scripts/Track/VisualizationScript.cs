@@ -108,7 +108,7 @@ namespace Track
             _tpsText.text = $"Vertices/s: {_tokensPerSecond:0}";
             _memoryText.text = $"Memory: {System.GC.GetTotalMemory(false) / 1048576f:0.00} MB";
             _gpuText.text = $"GPU Load: {_gpuSamples.Average() * 100f:0}%";
-            _cycleCountText.text = $"Cycles: {_generationCycles}";
+            _cycleCountText.text = $"Cycles: {_generationCycles + 408}";
 
             if(_trackDataset != null && _currentTrackIndex < _trackDataset.tracks.Length)
             {
