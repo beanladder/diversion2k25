@@ -1,15 +1,18 @@
+using System;
 using UnityEngine;
-
+using TMPro;
 public class CarController : MonoBehaviour
 {
     public Transform lastCheckpoint; // Stores the last crossed checkpoint
-
+    public float currentTime;
+    public bool timeElapsed=false;
+    public string lapTime;
+    public TextMeshProUGUI timerText;
     private void Start()
     {
         lastCheckpoint = transform; // Default to the car's starting position
         Debug.Log($"{gameObject.name} initialized at {transform.position}");
     }
-
     private void OnTriggerEnter(Collider other)
     {
         // ✅ Checkpoint Logic
@@ -25,8 +28,34 @@ public class CarController : MonoBehaviour
             Debug.Log($"{gameObject.name} hit the death zone at {other.transform.position}");
             Respawn();
         }
+        if (other.CompareTag("Finish")){
+            if(timeElapsed){
+                timeElapsed=false;
+                Debug.Log(lapTime);
+            }
+            else{
+                timeElapsed=true;
+            }
+        }
     }
 
+    private void Update()
+    {
+        if(timeElapsed){
+            currentTime+=Time.deltaTime;
+            DisplayTime(currentTime);
+        }
+    }
+    private void DisplayTime(float timeDisplay){
+        float minutes = Mathf.FloorToInt(timeDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeDisplay % 60);
+
+        lapTime = string.Format("{0:00}:{1:00}",minutes,seconds);
+        if(timerText != null){
+            timerText.text = lapTime;
+        }
+        Debug.Log(lapTime);
+    }
     public void Respawn()
     {
         if (lastCheckpoint != null)
