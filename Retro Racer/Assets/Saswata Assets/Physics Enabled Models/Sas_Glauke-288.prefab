@@ -665,7 +665,9 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 5880506588707843529}
   - {fileID: 2522946637965591088}
+  - {fileID: -2834084565393230237}
   - {fileID: 3894056131809669679}
+  - {fileID: 2717178936865020422}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &2522946637965591088
 MonoBehaviour:
@@ -707,6 +709,7 @@ MonoBehaviour:
   timeElapsed: 0
   lapTime: 
   timerText: {fileID: 7464993642799063033}
+  lapCount: -1
 --- !u!1 &680925351833296291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,8 +2017,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2318919231544157486, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2717178936865020422}
   m_SourcePrefab: {fileID: 100100000, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
+--- !u!1 &2141402055785409651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2318919231544157486, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
+  m_PrefabInstance: {fileID: 4438786800196225373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2717178936865020422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141402055785409651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebad8ed6024a21f4f986364b190653c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraObject: {fileID: 2141402055785409651}
 --- !u!114 &7464993642799063033 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6485536651508831908, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}

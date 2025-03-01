@@ -686,6 +686,7 @@ MonoBehaviour:
   timeElapsed: 0
   lapTime: 
   timerText: {fileID: 0}
+  lapCount: -1
 --- !u!1 &3658044634982531611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1446,10 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 7934132526721804826}
   - {fileID: 7342263103023214863}
+  - {fileID: -8946384223216446174}
+  - {fileID: 4967242281697363333}
   - {fileID: 3939065053769124493}
+  - {fileID: 1897799847171190040}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &7342263103023214863
 MonoBehaviour:
@@ -1487,6 +1491,7 @@ MonoBehaviour:
   timeElapsed: 0
   lapTime: 
   timerText: {fileID: 42769083084339169}
+  lapCount: -1
 --- !u!1 &5295599952849144272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,7 +2037,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2318919231544157486, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1897799847171190040}
   m_SourcePrefab: {fileID: 100100000, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
 --- !u!114 &42769083084339169 stripped
 MonoBehaviour:
@@ -2050,3 +2058,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5215971641218726942, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
   m_PrefabInstance: {fileID: 6527602038542016837}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8843037467426374763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2318919231544157486, guid: a9515ae086e46ee47a0e8bc2c0247077, type: 3}
+  m_PrefabInstance: {fileID: 6527602038542016837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1897799847171190040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843037467426374763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebad8ed6024a21f4f986364b190653c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraObject: {fileID: 8843037467426374763}

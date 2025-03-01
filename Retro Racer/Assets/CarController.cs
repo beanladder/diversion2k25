@@ -1,17 +1,24 @@
 using System;
 using UnityEngine;
 using TMPro;
-public class CarController : MonoBehaviour
+using Fusion;
+using Unity.VisualScripting;
+public class CarController : NetworkBehaviour
 {
     public Transform lastCheckpoint; // Stores the last crossed checkpoint
     public float currentTime;
+    public float finalTime;
     public bool timeElapsed=false;
     public string lapTime;
     public TextMeshProUGUI timerText;
+    public int lapCount = -1;
+    public Fusion.NetworkId NetworkCarId => Object.Id;
+    public GameMode1 gameMode1;
     private void Start()
     {
+        gameMode1 = FindAnyObjectByType<GameMode1>();
         lastCheckpoint = transform; // Default to the car's starting position
-        Debug.Log($"{gameObject.name} initialized at {transform.position}");
+        Debug.Log($"{gameObject.name} initialized at {transform.position} and has NetworkID {NetworkCarId}");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -28,13 +35,19 @@ public class CarController : MonoBehaviour
             Debug.Log($"{gameObject.name} hit the death zone at {other.transform.position}");
             Respawn();
         }
+        // Gamemode 1 logic
         if (other.CompareTag("Finish")){
             if(timeElapsed){
-                timeElapsed=false;
-                Debug.Log(lapTime);
+                lapCount++;
+                if(lapCount==1){
+                    timeElapsed=false;
+                    finalTime=currentTime;
+                    gameMode1.StoreTimes(NetworkCarId,finalTime);
+                }
             }
             else{
                 timeElapsed=true;
+                lapCount++;
             }
         }
     }
