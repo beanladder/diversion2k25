@@ -4,18 +4,32 @@ using TMPro;
 using Fusion.Sockets;
 using System.Collections.Generic;
 using System;
+using UnityEngine.UI;
 
 public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
 {   
     public NetworkRunner runner;
     public TMP_InputField roomCodeInput;
     public GameObject UIScreen;
+    public Button createButton;
+    public Button joinButton;
     string roomCodeToCheck;
     bool isCreatingRoom;
+    private float coolDownTimer = 0f;
+    private const float CoolDownDuration = 4f;
 
     private void Start()
     {
         runner.AddCallbacks(this);
+    }
+    private void Update()
+    {
+        if(coolDownTimer>0){
+            coolDownTimer -= Time.deltaTime;
+        }
+        if(coolDownTimer<=0){
+            EnableButton();
+        }
     }
 
     public void CreateRoom(){
@@ -29,6 +43,7 @@ public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
         roomCodeToCheck=roomCode;
         runner.AddCallbacks(this);
         runner.JoinSessionLobby(SessionLobby.ClientServer);
+        StartCoolDown();
     }
     public void JoinRoom(){
         string roomCode = roomCodeInput.text;
@@ -41,8 +56,8 @@ public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
         roomCodeToCheck=roomCode;
         runner.AddCallbacks(this);
         runner.JoinSessionLobby(SessionLobby.ClientServer);
+        StartCoolDown();
     }
-
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList){
         bool roomExists = sessionList.Exists(session => session.Name == roomCodeToCheck);
         if(isCreatingRoom){
@@ -78,6 +93,18 @@ public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
             Debug.Log($"create room successfully {sessionName}");
             UIScreen.SetActive(false);
         }
+    }
+    private void DisableButton(){
+        createButton.interactable=false;
+        joinButton.interactable=false;
+    }
+    private void EnableButton(){
+        createButton.interactable=true;
+        joinButton.interactable=true;
+    }
+    private void StartCoolDown(){
+        coolDownTimer = CoolDownDuration;
+        DisableButton();
     }
 
     public void OnConnectedToServer(NetworkRunner runner){}

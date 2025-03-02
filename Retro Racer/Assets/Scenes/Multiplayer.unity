@@ -2577,8 +2577,8 @@ MonoBehaviour:
   runner: {fileID: 59291781}
   roomCodeInput: {fileID: 626020267}
   UIScreen: {fileID: 1362888704}
-  userName: {fileID: 1470463987}
-  playerName: 
+  createButton: {fileID: 746513182}
+  joinButton: {fileID: 1994206110}
 --- !u!1 &1319087985
 GameObject:
   m_ObjectHideFlags: 0
