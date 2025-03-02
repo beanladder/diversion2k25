@@ -6,6 +6,7 @@ public class RoomManager : MonoBehaviour
 {
     public NetworkRunner runner; // Reference to the NetworkRunner component
     public TMP_InputField roomCodeInput; // Input field for the room code
+    public TMP_InputField userName;
     public GameObject UIScreen;
 
     // Method to create a new room with the entered code

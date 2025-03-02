@@ -12,7 +12,7 @@ public class CarController : NetworkBehaviour
     public string lapTime;
     public TextMeshProUGUI timerText;
     public int lapCount = -1;
-    public Fusion.NetworkId NetworkCarId => Object.Id;
+    public NetworkId NetworkCarId => Object.Id;
     public GameMode1 gameMode1;
     private void Start()
     {

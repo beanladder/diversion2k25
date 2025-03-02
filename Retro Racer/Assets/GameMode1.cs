@@ -7,4 +7,9 @@ public class GameMode1 : NetworkBehaviour
     public void StoreTimes(NetworkId networkId, float lapTime){
         carLapTimes.Add(networkId,lapTime);
     }
+    public void ShowDictionary(){
+        foreach(var kvp in carLapTimes){
+            Debug.Log($"Player Id {kvp.Key}, laptime {kvp.Value}");
+        }
+    }
 }   
