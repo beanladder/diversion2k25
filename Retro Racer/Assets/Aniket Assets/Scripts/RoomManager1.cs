@@ -5,9 +5,11 @@ using Fusion.Sockets;
 using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
 {   
+    public static RoomManager1 Instance {get; private set;}
     public NetworkRunner runner;
     public TMP_InputField roomCodeInput;
     public GameObject UIScreen;
@@ -17,6 +19,8 @@ public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
     bool isCreatingRoom;
     private float coolDownTimer = 0f;
     private const float CoolDownDuration = 4f;
+    public TMP_InputField userName;
+    public string playerName="";
 
     private void Start()
     {
@@ -43,6 +47,7 @@ public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
         roomCodeToCheck=roomCode;
         runner.AddCallbacks(this);
         runner.JoinSessionLobby(SessionLobby.ClientServer);
+        playerName = userName.text;
         StartCoolDown();
     }
     public void JoinRoom(){
@@ -56,6 +61,7 @@ public class RoomManager1 : MonoBehaviour, INetworkRunnerCallbacks
         roomCodeToCheck=roomCode;
         runner.AddCallbacks(this);
         runner.JoinSessionLobby(SessionLobby.ClientServer);
+        playerName = userName.text;
         StartCoolDown();
     }
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList){

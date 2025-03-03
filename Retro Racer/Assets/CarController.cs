@@ -14,11 +14,19 @@ public class CarController : NetworkBehaviour
     public int lapCount = -1;
     public NetworkId NetworkCarId => Object.Id;
     public GameMode1 gameMode1;
+    [Networked] public string PlayerName { get; set;}
     private void Start()
     {
         gameMode1 = FindAnyObjectByType<GameMode1>();
         lastCheckpoint = transform; // Default to the car's starting position
         Debug.Log($"{gameObject.name} initialized at {transform.position} and has NetworkID {NetworkCarId}");
+    }
+    public override void Spawned()
+    {
+        if(HasStateAuthority){
+            PlayerName = FindAnyObjectByType<RoomManager1>().playerName;
+        }
+        Debug.Log($"{PlayerName} has joined the game");
     }
     private void OnTriggerEnter(Collider other)
     {
